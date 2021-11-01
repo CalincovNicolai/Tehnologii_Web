@@ -1,0 +1,123 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Merriweather', serif;
+     }
+
+     a:link {
+       color: #00ADB5;
+       text-decoration: none;
+     }
+
+     /* visited link */
+     a:visited {
+       color: white;
+       text-decoration: none;
+     }
+
+     /* mouse over link */
+     a:hover {
+       color: red;
+       text-decoration: underline;
+     }
+
+     /* selected link */
+     a:active {
+       color: red;
+       text-decoration: underline;
+     }
+
+     span {
+       color: white;
+     }
+
+     td {
+       padding: 10px 20px;
+     }
+
+     th {
+       border-collapse: collapse;
+       text-align: center;
+     }
+
+     hr {
+       border-color: #EEEEEE;
+       border-style: none;
+       border-top-style: dotted;
+       border-width: 10px 0 0 0;
+       height: 0;
+       width: 6%;
+       opacity: 0.35;
+     }
+
+     ul {
+       position: fixed;
+       top: 0;
+       width: 100%;
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+       overflow: hidden;
+       background-color: #333;
+     }
+
+     li:last-child {
+       float: right;
+     }
+
+     li {
+       float: left;
+     }
+
+     li a {
+       display: block;
+       color: white;
+       text-align: center;
+       padding: 14px 16px;
+       text-decoration: none;
+     }
+
+     li a:hover {
+       background-color: #111;
+     }
+
+     .active {
+       background-color: #04AA6D;
+     }
+
+     .wrapper {
+       height: 100%;
+       line-height: 1.5;
+       word-spacing: 2px;
+       letter-spacing: 0.5px;
+     }
+
+     .fixed {
+       background-attachment: fixed;
+       background-repeat: no-repeat;
+       background-size: cover;
+       background-position: center center;
+       height: 100%;
+       width: 100%;
+       color: #eeeeee;
+       text-align: center;
+       display: table;
+     }
+
+     .fixed h2 {
+       display: table-cell;
+       vertical-align: middle;
+     }
+
+     .scroll {
+       background-color: #222831;
+       padding: 30px 500px;
+       color: #00ADB5;
+       text-align: justify;
+     }
+
+     .one {background-image: url("../images/django_8.jpg")}
+     .two {background-image: url("../images/django_act6.jpg")}
+     .three {background-image: url("../images/django_2.jpg")}
+     .four {background-image: url("../images/django_9.jpg")}

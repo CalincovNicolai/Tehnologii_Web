@@ -1,0 +1,187 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Merriweather', serif;
+}
+
+a:link {
+  color: #00ADB5;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+  color: red;
+  text-decoration: underline;
+}
+
+ul {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li:last-child {
+  float: right;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+.img1 {
+  background-image: url('../images/django_1.jpg');
+}
+
+.img2 {
+  background-image: url('../images/django_2.jpg');
+}
+
+.img3 {
+  background-image: url('../images/django_3.jpg');
+}
+
+.img4 {
+  background-image: url('../images/django_4.jpg');
+}
+
+.img5 {
+  background-image: url('../images/django_5.jpg');
+}
+
+.img6 {
+  background-image: url('../images/django_6.jpg');
+}
+
+.img7 {
+  background-image: url('../images/django_7.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-image {
+  height: 150vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-text {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-weight: bold;
+  font-size: 80px;
+  border: 10px solid #f1f1f1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 500px;
+  padding: 25px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #66BFBF;
+}
+
+.nico {
+  font-size: 12px;
+  color: #EAF6F6;
+  font-weight: bold;
+  align-self: flex-end;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+#scrollPath {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+#progressbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+#progressbar:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  filter: blur(10px);
+}
+
+#progressbar:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  filter: blur(30px);
+}
