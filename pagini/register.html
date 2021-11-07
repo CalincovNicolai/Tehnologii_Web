@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign up</title>
+	<link rel="stylesheet" type="text/css" href="../css/register.css">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@200;300;600&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div id="progressbar"></div>
+  	<div id="scrollPath"></div>
+    <div class="bg-image img1">
+      <p class="nico">© 2021 Calincov Nicolai.</p>
+    </div>
+
+	<div class="container">
+        <div class="header">
+            <h2>Sign up</h2>
+        </div>
+		<form id="registration_form">
+			<div class="form-control">
+                <label>First Name</label>
+				<input type="text" id="form_fname" name="" required="">
+				<small class="error_form" id="fname_error_message"></small>	
+			</div>
+			<div class="form-control">
+                <label>Second Name</label>
+				<input type="text" id="form_sname" name="" required="">
+				<small class="error_form" id="sname_error_message"></small>
+			</div>
+			<div class="form-control">
+                <label>Email id</label>	
+				<input type="email" id="form_email" name="" required="">
+				<small class="error_form" id="email_error_message"></small>
+			</div>
+			<div class="form-control">
+                <label>Password</label>	
+				<input type="password" id="form_password" name="" required="">
+				<small class="error_form" id="password_error_message"></small>
+			</div>
+			<div class="form-control">
+                <label>Re-Enter Password</label>
+				<input type="password" id="form_retype_password" name="" required="">
+				<small class="error_form" id="retype_password_error_message"></small>	
+			</div>
+			<input type="submit" value="Register" name="">
+		</form>
+	</div>
+    <ul>
+        <li><a href="../index.html">Django</a></li>
+        <li><a href="summary.html">Summary</a></li>
+        <li><a href="actors.html">Actors</a></li>
+        <li><a href="director.php">Director</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+        <li><a href="paramount.html">Watch Now!</a></li>
+		<div class="topnav-right">
+			<li><a href="sign.html">Sign in</a></li>
+			<li><a href="register.html">Sign up</a></li>
+		</div>
+    </ul>
+	<script type="text/javascript" src="../scripts/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="register.js"></script>
+</body>
+</html>
