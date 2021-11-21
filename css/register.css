@@ -5,6 +5,15 @@ body {
     font-family: 'Merriweather', serif;
 }
 
+.error {
+    color: red;
+    font-weight: bold;
+    padding-top: 0.3rem;
+    padding-left: 0.2rem;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
 a:link {
     color: #00ADB5;
     text-decoration: none;
@@ -142,7 +151,7 @@ form {
     width: 95%;
 }
 
-form input[type="submit"] {
+.form .btn {
     background-color: #66BFBF;
     border: 2px solid #66BFBF;
     border-radius: 4px;
@@ -155,18 +164,11 @@ form input[type="submit"] {
     width: 100%;
 }
 
-form input[type="submit"]:hover {
+.form .btn:hover {
     background: #333;
     color: #fff;
     border: 2px solid #333;
     border-radius: 4px;
-}
-
-.error_form {
-    top: 12px;
-    color: rgb(216, 15, 15);
-    font-size: 15px;
-    font-family: Helvetica;
 }
 
 ::-webkit-scrollbar {

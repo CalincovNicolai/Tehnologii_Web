@@ -19,22 +19,21 @@
       <div class="header">
             <h2>CONTACTS</h2>
           </div>
-      <form action="" class="form" id="form">
+      <form action="../db/config.php" method="post" class="form" id="formContact">
+      <div class="form-control">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="name">
+      </div>
         <div class="form-control">
           <label for="email">Email:</label>
-          <input type="text" name="email" id="email" placeholder="email@example.com">
+          <input type="email" name="email" id="email" placeholder="email@example.com">
         </div>
-      <div class="form-control">
-        <label for="subject">Subject:</label>
-        <input type="text" name="subject" id="subject" placeholder="subject">
-      </div>
       <div class="form-control">
           <label for="message">Message:</label>
           <textarea name="message" id="message" placeholder="message"></textarea>
       </div>
       
       <button name="submit" id="submit">Send</button>
-      <label id="info"></label>
     </form>
     <ul class="details">
         <li>Telephone: +37360131331</li>
@@ -46,7 +45,7 @@
       <li><a href="../index.html">Django</a></li>
       <li><a href="summary.html">Summary</a></li>
       <li><a href="actors.html">Actors</a></li>
-      <li><a href="director.php">Director</a></li>
+      <li><a href="directors.php">Director</a></li>
       <li><a href="contacts.html">Contacts</a></li>
       <li><a href="paramount.html">Watch Now!</a></li>
     <div class="topnav-right">
@@ -55,7 +54,8 @@
     </div>
   </ul>
     <script type="text/javascript" src="../scripts/main.js"></script>
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="../scripts/script.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <script src="../scripts/forms_validation.js"></script>
   </body>
 </html>

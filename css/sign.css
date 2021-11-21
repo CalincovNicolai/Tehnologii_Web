@@ -5,6 +5,15 @@ body {
   font-family: 'Merriweather', serif;
 }
 
+.error {
+  color: red;
+  font-weight: bold;
+  padding-top: 0.3rem;
+  padding-left: 0.2rem;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
 a:link {
   color: #00ADB5;
   text-decoration: none;
@@ -171,7 +180,7 @@ h2 {
 
 .form-control {
   margin-bottom: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   position: relative;
 }
 
@@ -188,43 +197,6 @@ h2 {
   font-size: 14px;
   padding: 10px;
   width: 100%;
-}
-
-.form-control.success input {
-  border-color: #2ecc71;
-}
-
-.form-control.error input {
-  border-color: #e74c3c;
-}
-
-.form-control i {
-  position: absolute;
-  top: 35px;
-  right: 10px;
-  visibility: hidden;
-}
-
-.form-control.success i.fa-check-circle {
-  color: #2ecc71;
-  visibility: visible;
-}
-
-.form-control.error i.fa-exclamation-circle {
-  color: #e74c3c;
-  visibility: visible;
-}
-
-.form-control small {
-  visibility: hidden;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.form-control.error small {
-  color: #e74c3c;
-  visibility: visible;
 }
 
 .form button {

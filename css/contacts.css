@@ -5,28 +5,37 @@ body {
   font-family: 'Merriweather', serif;
 }
 
+.error {
+  color: red;
+  font-weight: bold;
+  padding-top: 0.3rem;
+  padding-left: 0.2rem;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
 a:link {
   color: #00ADB5;
   text-decoration: none;
 }
 
-      /* visited link */
-      a:visited {
-        color: white;
-        text-decoration: none;
-      }
+/* visited link */
+a:visited {
+  color: white;
+  text-decoration: none;
+}
 
-      /* mouse over link */
-      a:hover {
-        color: #00ADB5;
-        text-decoration: none;
-      }
+/* mouse over link */
+a:hover {
+  color: #00ADB5;
+  text-decoration: none;
+}
 
-      /* selected link */
-      a:active {
-        color: #00ADB5;
-        text-decoration: none;
-      }
+/* selected link */
+a:active {
+  color: #00ADB5;
+  text-decoration: none;
+}
 
 .links {
   position: fixed;
@@ -52,11 +61,11 @@ a:link {
 }
 
 li .FB {
-    color: #00ADB5;
-    text-decoration: none;
+  color: #00ADB5;
+  text-decoration: none;
 }
 
-li .FB:hover{
+li .FB:hover {
   background-color: #333;
 }
 
@@ -78,7 +87,9 @@ li a:hover {
   background-color: #111;
 }
 
-.img1 { background-image: url('../images/django_10.jpg'); }
+.img1 {
+  background-image: url('../images/django_10.jpg');
+}
 
 .bg-image {
   height: 150vh;
@@ -136,7 +147,7 @@ h2 {
 
 .form-control {
   margin-bottom: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   position: relative;
 }
 
