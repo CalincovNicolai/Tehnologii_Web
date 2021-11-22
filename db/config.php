@@ -11,8 +11,8 @@ if (isset($_POST['submit_reg'])) {
 
     $sql = "INSERT INTO registers (fname, sname, email, password) VALUES('$first','$second','$email','$password')";
     mysqli_query($db, $sql);
-
-    header("location: ../pagini/register.html");
+    $_SESSION['message'] = "Signed up with success!";
+    header("location: ../pagini/register.php");
 }
 
 if (isset($_POST['submit_log'])) {
@@ -21,9 +21,10 @@ if (isset($_POST['submit_log'])) {
 
     $sql = "SELECT * FROM registers WHERE email = '$email' AND password = '$password'";
     $result = mysqli_query($db, $sql);
-
+    
     if (mysqli_num_rows($result) == 1) {
-        header("location: ../index.html");
+        $_SESSION['message'] = "Signed in with success!";
+        header("location: ../pagini/sign.php");
     }
 }
 
@@ -32,8 +33,8 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $comment = $_POST['message'];
 
-    $sql = "INSERT INTO messages (name, email, message) VALUES('$name','$email','$comment')";
+    $sql="INSERT INTO messages (name, email, message) VALUES('$name','$email','$comment')";
     mysqli_query($db, $sql);
-
-    header("location: ../pagini/contacts.html");
+    $_SESSION['message'] = "Message saved with success!";
+    header("location: ../pagini/contacts.php");
 }

@@ -89,11 +89,11 @@
         <li><a href="summary.html">Summary</a></li>
         <li><a href="actors.html">Actors</a></li>
         <li><a href="directors.php">Director</a></li>
-        <li><a href="contacts.html">Contacts</a></li>
+        <li><a href="contacts.php">Contacts</a></li>
         <li><a href="paramount.html">Watch Now!</a></li>
         <div class="topnav-right">
-            <li><a href="sign.html">Sign in</a></li>
-            <li><a href="register.html">Sign up</a></li>
+            <li><a href="sign.php">Sign in</a></li>
+            <li><a href="register.php">Sign up</a></li>
         </div>
     </ul>
 </body>
