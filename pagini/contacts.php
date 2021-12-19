@@ -1,4 +1,3 @@
-<?php include('../db/config.php'); ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -19,19 +18,10 @@
     </div>
 
     <div class="container">
-        <?php if (isset($_SESSION['message'])) : ?>
-            <div class="msg">
-                <?php
-                echo $_SESSION['message'];
-                unset($_SESSION['message']);
-                ?>
-            </div>
-        <?php endif ?>
-
         <div class="header">
             <h2>CONTACTS</h2>
         </div>
-        <form action="../db/config.php" method="post" class="form" id="formContact">
+        <form method="post" class="form" id="formContact">
             <div class="form-control">
                 <label for="name">Name:</label>
                 <input type="text" name="name" id="name" placeholder="name">
@@ -46,6 +36,10 @@
             </div>
 
             <button name="submit" id="submit">Send</button>
+            <span id="response"></span>
+            <div class="msg" id="msg">
+
+            </div>
         </form>
         <ul class="details">
             <li>Telephone: +37360131331</li>
@@ -68,7 +62,7 @@
     <script type="text/javascript" src="../scripts/main.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
-    <script src="../scripts/forms_validation.js"></script>
+    <script src="../scripts/submit_con.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,3 @@
-<?php include('../db/config.php'); ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -20,19 +19,10 @@
 
     </div>
     <div class="container">
-        <?php if (isset($_SESSION['message'])) : ?>
-            <div class="msg">
-                <?php
-                echo $_SESSION['message'];
-                unset($_SESSION['message']);
-                ?>
-            </div>
-        <?php endif ?>
-
         <div class="header">
             <h2>Sign in</h2>
         </div>
-        <form action="../db/config.php" method="post" id="formValidation" class="form">
+        <form method="post" id="forms_validation" class="form">
             <div class="form-control">
                 <label>Email:</label>
                 <input type="email" id="email" name="email" placeholder="email@example.com">
@@ -42,6 +32,10 @@
                 <input type="password" id="password" name="password" placeholder="*************">
             </div>
             <button name="submit_log" type="submit" class="btn">Submit</button>
+            <span id="response"></span>
+            <div class="msg" id="msg">
+
+            </div>
         </form>
     </div>
     <ul>
@@ -59,7 +53,7 @@
     <script type="text/javascript" src="../scripts/main.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
-    <script src="../scripts/forms_validation.js"></script>
+    <script src="../scripts/submit_log.js"></script>
 </body>
 
 </html>

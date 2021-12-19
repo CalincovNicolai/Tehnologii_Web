@@ -1,5 +1,6 @@
 $(function(){
-    var $registerForm = $("#formValidation")
+    var $registerForm = $("#forms_validation")
+    
     $.validator.addMethod("noSpace", function(value, element){
         return value == '' || value.trim().length != 0
     }, "Spaces are not allowed!")
@@ -9,10 +10,6 @@ $(function(){
             && /[a-z]/.test(value) // are o litera mica
             && /\d/.test(value) // are un numar
      });
-
-    jQuery.validator.addMethod("lettersonly", function(value, element) {
-        return this.optional(element) || /^[a-z]+$/i.test(value);
-      }, "Letters only please!"); 
      
     if($registerForm.length){
         $registerForm.validate({
@@ -20,12 +17,10 @@ $(function(){
                 fname: {
                     required: true,
                     noSpace: true,
-                    lettersonly: true
                 },
                 sname: {
                     required: true,
                     noSpace: true,
-                    lettersonly: true
                 },
                 email: {
                     required: true,
@@ -66,55 +61,39 @@ $(function(){
                     required: "Password cannot be blank!",
                     equalTo: "Password is not valid!"
                 }
-            }
-        })
-    }
-})
-
-
-$(function(){
-    var $registerForm = $("#formContact")
-    $.validator.addMethod("noSpace", function(value, element){
-        return value == '' || value.trim().length != 0
-    }, "Spaces are not allowed!")
-
-    jQuery.validator.addMethod("lettersonly", function(value, element) {
-        return this.optional(element) || /^[a-z]+$/i.test(value);
-      }, "Letters only please!"); 
-
-    if($registerForm.length){
-        $registerForm.validate({
-            rules:{
-                name:{
-                    required: true,
-                    noSpace: true,
-                    lettersonly: true
-                },
-                email: {
-                    required: true,
-                    email: true,
-                },
-                message: {
-                    required: true,
-                    noSpace: true,
-                    minlength: 20
-                }
             },
-            messages:{
-                name:{
-                    required: "Name cannot be blank!",
-                    noSpace: "Write something!",
-                    lettersonly: "Write only letters!" 
-                },
-                email: {
-                    required: "Email cannot be blank!",
-                    email: "Email is not valid!"
-                },
-                message: {
-                    required: "Message cannot be blank!",
-                    noSpace: "Write something!",
-                    minlength: "Message should not be less then 20 characters!"
-                }
+            submitHandler: function(form, event) {
+                event.preventDefault();
+                var fname =$("#fname").val();
+                var sname =$("#sname").val();
+                var email =$("#email").val();
+                var password =$("#password").val();
+                var password2 =$("#password2").val();
+                var response = document.getElementById("msg");
+
+                $.ajax({
+                    url:'http://localhost/Tehnologii_Web/db/submit_reg.php',
+                    type: 'POST',
+                    cache: false,
+                    data: {'fname': fname, 'sname': sname, 'email': email, 'password': password, 'password2': password2},
+                    dataType: 'json',
+                    success: function(data){
+                        console.log(data);
+                        if(!data){
+                            response.style.color = "red";
+                            response.innerHTML = "Error!";
+                        }
+                        else{
+                            if(data.status == 1) {
+                            response.style.color = "green";
+                            response.innerHTML = data.mesage;
+                        }else{
+                            response.style.color = "red";
+                            response.innerHTML = data.mesage;
+                        }
+                        }
+                    }
+                })
             }
         })
     }

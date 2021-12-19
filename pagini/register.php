@@ -1,4 +1,3 @@
-<?php include('../db/config.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,19 +20,10 @@
     </div>
 
     <div class="container">
-        <?php if (isset($_SESSION['message'])) : ?>
-            <div class="msg">
-                <?php
-                echo $_SESSION['message'];
-                unset($_SESSION['message']);
-                ?>
-            </div>
-        <?php endif ?>
-
         <div class="header">
             <h2>Sign up</h2>
         </div>
-        <form action="../db/config.php" method="post" class="form" id="formValidation">
+        <form method="post" class="form" id="forms_validation">
             <div class="form-control">
                 <label>First Name:</label>
                 <input type="text" id="fname" name="fname" placeholder="John">
@@ -55,6 +45,10 @@
                 <input type="password" id="password2" name="password2" placeholder="*************">
             </div>
             <button name="submit_reg" type="submit" class="btn">Register</button>
+            <span id="response"></span>
+            <div class="msg" id="msg">
+
+            </div>
         </form>
     </div>
     <ul>
